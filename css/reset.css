@@ -13,7 +13,7 @@ a {
 ul,
 ol,
 li {
-
+    list-style: none;
 }
 img {
     list-style: none;

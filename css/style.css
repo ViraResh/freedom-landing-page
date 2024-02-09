@@ -50,7 +50,19 @@ body {
     
 }
 /*-------*/
-
+.title {
+    font-size: 36px;
+    line-height: 111.111111%;/* 40/36 */
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.label {
+    font-size: 16px;
+    line-height: 125%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/*-------*/
 .header {
     position: absolute;
     top: 0;
@@ -71,6 +83,8 @@ body {
 .page__main-block {
 }
 .page__benefits {
+}
+.page__training {
 }
 /*-------*/
 .main-block {
@@ -131,13 +145,18 @@ body {
 
 @media(max-width: 991.98px) {
     .main-block {
-        padding-top: 110px;
-        padding-bottom: 110px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
     .main-block__title {
         font-size: 54px;
     }
-
+}
+@media(max-width: 767.98px) {
+    .main-block {
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
 }
 /**/
 .benefits {
@@ -149,12 +168,8 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
 }
-.benefits__title,
-.item-benefit__title {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 111%;
+.benefits__title {
+
 }
 .benefits__item {
 }
@@ -179,4 +194,81 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 }
-/**/
+/*---------*/
+.training {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #1f2327;
+}
+.training__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.training__content {
+    flex: 0 1 50%;
+    padding-left: 123px;
+}
+.training__label {
+
+}
+.training__label:not(:last-child) {
+    margin-bottom: 5px;
+}
+.training__title {
+    max-width: 350px;
+}
+.training__title:not(:last-child) {
+    margin-bottom: 25px;
+}
+.training__list {
+}
+.training__list li {
+    padding-left: 35px;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: url("../img/icons/check.svg") 0 3px no-repeat;
+}
+.training__list li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.training__list:not(:last-child) {
+    margin-bottom: 15px;
+}
+.training__image {
+    flex: 0 1 50%;
+}
+.training__image img {
+    max-width: 100%;
+}
+@media(max-width: 1140px) {
+    .training__content {
+        padding-left: 50px;
+    }
+}
+@media(max-width: 991.98px) {
+    .training {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .training__content {
+        padding-left: 30px;
+    }
+}
+@media(max-width: 767.98px) {
+    .training {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .training__container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+    .training__content {
+        padding-left: 0;
+    }
+}
+/*---------*/
